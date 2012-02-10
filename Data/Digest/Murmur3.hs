@@ -11,6 +11,7 @@ import Data.Word
 
 
 data Hash = Hash Word64 Word64
+          deriving (Eq, Ord)
 
 
 asByteString :: Hash -> ByteString
