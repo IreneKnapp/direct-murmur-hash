@@ -5,6 +5,7 @@ module Data.Digest.Murmur3
   where
 
 import Control.Monad
+import Control.Applicative
 import Data.Bits
 import Data.ByteString (ByteString)
 import qualified Data.ByteString as BS
@@ -16,6 +17,11 @@ data Hash = Hash Word64 Word64
 
 
 newtype Identity a = MakeIdentity { identityAction :: a }
+instance Functor Identity where 
+  fmap f = MakeIdentity . f . identityAction
+instance Applicative Identity where
+  pure = return
+  (<*>) = ap
 instance Monad Identity where
   return a = MakeIdentity a
   (>>=) x f = f $ identityAction x
