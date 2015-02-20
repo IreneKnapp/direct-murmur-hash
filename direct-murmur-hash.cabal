@@ -6,7 +6,7 @@ license: BSD3
 license-file: LICENSE
 copyright: Copyright (c) 2013 Irene Knapp
 author: Irene Knapp <irene.knapp@icloud.com>
-maintainer: irene.knapp@icloud.com
+maintainer: David Barbour <dmbarbour@gmail.com>
 homepage: http://ireneknapp.com/software/
 bug-reports: https://github.com/IreneKnapp/direct-murmur-hash/issues
 category: Data
